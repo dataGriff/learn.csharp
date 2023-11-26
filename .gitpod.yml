@@ -1,6 +1,12 @@
 image:
   file: .cde.Dockerfile
 
+tasks:
+- name: Installed Docker Version
+  command: docker version
+- name: Installed Donet Version
+  command: dotnet --version
+
 vscode:
   extensions:
     - muhammad-sammy.csharp
