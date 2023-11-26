@@ -345,18 +345,48 @@ do
 //     }
 // } while (validEntry == false);
 
-string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+// string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
 
 
-for (int i = 0; i < myStrings.Length; i++)
-{
-    string myString = myStrings[i];
-    int periodLocation = myString.IndexOf('.');
-    while (periodLocation != -1)
-    {
-            Console.WriteLine(myString.Substring(0, periodLocation));
-            myString = myString.Remove(0, periodLocation + 1).Trim();
-            periodLocation = myString.IndexOf('.');    
-    }
-    Console.WriteLine(myString);
-}
+// for (int i = 0; i < myStrings.Length; i++)
+// {
+//     string myString = myStrings[i];
+//     int periodLocation = myString.IndexOf('.');
+//     while (periodLocation != -1)
+//     {
+//             Console.WriteLine(myString.Substring(0, periodLocation));
+//             myString = myString.Remove(0, periodLocation + 1).Trim();
+//             periodLocation = myString.IndexOf('.');    
+//     }
+//     Console.WriteLine(myString);
+// }
+
+// Random dice = new Random(); // stateful so requires a new instance (stores seed of random)
+// int roll = dice.Next(1, 7);
+// Console.WriteLine(roll); // staleless because just returns a value
+
+// // overload examples
+
+// int number = 7;
+// string text = "seven";
+
+// Console.WriteLine(number);
+// Console.WriteLine();
+// Console.WriteLine(text);
+
+// Random dice2 = new Random();
+// int roll1 = dice2.Next();
+// int roll2 = dice2.Next(101);
+// int roll3 = dice2.Next(50, 101);
+
+// Console.WriteLine($"First roll: {roll1}");
+// Console.WriteLine($"Second roll: {roll2}");
+// Console.WriteLine($"Third roll: {roll3}");
+
+// dice2.Next(1, 7);
+
+int firstValue = 500;
+int secondValue = 600;
+int largerValue = System.Math.Max(firstValue, secondValue);
+
+Console.WriteLine(largerValue);
