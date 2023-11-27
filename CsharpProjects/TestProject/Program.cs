@@ -619,22 +619,24 @@ foreach (var orderID in orderIDs)
    to the console window.
  */
 
-string message = "The quick brown fox jumps over the lazy dog.";
+// string message = "The quick brown fox jumps over the lazy dog.";
 
-char[] characterMessage = message.ToCharArray();
-Array.Reverse(characterMessage);
+// char[] characterMessage = message.ToCharArray();
+// Array.Reverse(characterMessage);
 
-int letterCount = 0;
+// int letterCount = 0;
 
-foreach (char letter in characterMessage) 
-{ 
-    if (letter == 'o') 
-    { 
-        letterCount++; 
-    } 
-}
+// foreach (char letter in characterMessage) 
+// { 
+//     if (letter == 'o') 
+//     { 
+//         letterCount++; 
+//     } 
+// }
 
-string newMessage = new String(characterMessage);
+// string newMessage = new String(characterMessage);
 
-Console.WriteLine(newMessage);
-Console.WriteLine($"'o' appears {letterCount} times.");
+// Console.WriteLine(newMessage);
+// Console.WriteLine($"'o' appears {letterCount} times.");
+
+
