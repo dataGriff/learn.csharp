@@ -569,22 +569,22 @@ bool processedCustomer;
   consist of a letter from A to E, and a three
   digit number. Ex. A123.
 */
-Random random = new Random();
-string[] orderIDs = new string[5];
+// Random random = new Random();
+// string[] orderIDs = new string[5];
 
-for (int i = 0; i < orderIDs.Length; i++)
-{
-    int prefixValue = random.Next(65, 70);
-    string prefix = Convert.ToChar(prefixValue).ToString();
-    string suffix = random.Next(1, 1000).ToString("000");
+// for (int i = 0; i < orderIDs.Length; i++)
+// {
+//     int prefixValue = random.Next(65, 70);
+//     string prefix = Convert.ToChar(prefixValue).ToString();
+//     string suffix = random.Next(1, 1000).ToString("000");
 
-    orderIDs[i] = prefix + suffix;
-}
+//     orderIDs[i] = prefix + suffix;
+// }
 
-foreach (var orderID in orderIDs)
-{
-    Console.WriteLine(orderID);
-}
+// foreach (var orderID in orderIDs)
+// {
+//     Console.WriteLine(orderID);
+// }
 
 // good whitespace
 
@@ -639,4 +639,25 @@ foreach (var orderID in orderIDs)
 // Console.WriteLine(newMessage);
 // Console.WriteLine($"'o' appears {letterCount} times.");
 
+Console.WriteLine("Signed integral types:");
 
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
+
+Console.WriteLine("");
+Console.WriteLine("Unsigned integral types:");
+
+Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
+Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
+Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
+Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
+
+Console.WriteLine("");
+Console.WriteLine("Floating point types:");
+Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
+Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+
+int[] data = new int[3];
