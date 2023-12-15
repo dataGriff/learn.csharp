@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/CsharpProjects/TestProject/TestProject.csproj",
+                "${workspaceFolder}/learn.csharp.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/CsharpProjects/TestProject/TestProject.csproj",
+                "${workspaceFolder}/learn.csharp.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/CsharpProjects/TestProject/TestProject.csproj"
+                "${workspaceFolder}/learn.csharp.sln"
             ],
             "problemMatcher": "$msCompile"
         }

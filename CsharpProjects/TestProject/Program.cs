@@ -1631,68 +1631,154 @@ else ipAddress is invalid
 //     return win ? "You win!" : "You lose!";
 // }
 
-using System;
+// using System;
 
-string[] pettingZoo =
-{
-    "alpacas", "capybaras", "chickens", "ducks", "emus", "geese",
-    "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
-    "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
-};
+// string[] pettingZoo =
+// {
+//     "alpacas", "capybaras", "chickens", "ducks", "emus", "geese",
+//     "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
+//     "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+// };
 
-void PlanSchoolVisit(string schoolName, int groups = 6)
+// void PlanSchoolVisit(string schoolName, int groups = 6)
+// {
+//     RandomizeAnimals();
+//     string[,] group = AssignGroup(groups);
+//     Console.WriteLine(schoolName);
+//     PrintGroup(group);
+// }
+
+// PlanSchoolVisit("School A");
+// PlanSchoolVisit("School B", 3);
+// PlanSchoolVisit("School C", 2);
+
+// void RandomizeAnimals() 
+// {
+//     Random random = new Random();
+
+//     for (int i = 0; i < pettingZoo.Length; i++) 
+//     {
+//         int r = random.Next(i, pettingZoo.Length);
+
+//         string temp = pettingZoo[r];
+//         pettingZoo[r] = pettingZoo[i];
+//         pettingZoo[i] = temp;
+//     }
+// }
+
+// string[,] AssignGroup(int groups = 6) 
+// {
+//     string[,] result = new string[groups, pettingZoo.Length/groups];
+//     int start = 0;
+
+//     for (int i = 0; i < groups; i++) 
+//     {
+//         for (int j = 0; j < result.GetLength(1); j++) 
+//         {
+//             result[i,j] = pettingZoo[start++];
+//         }
+//     }
+
+//     return result;
+// }
+
+// void PrintGroup(string[,] group) 
+// {
+//     for (int i = 0; i < group.GetLength(0); i++) 
+//     {
+//         Console.Write($"Group {i + 1}: ");
+//         for (int j = 0; j < group.GetLength(1); j++) 
+//         {
+//             Console.Write($"{group[i,j]}  ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+/* 
+This code uses a names array and corresponding methods to display
+greeting messages
+*/
+/* 
+This code uses a names array and corresponding methods to display
+greeting messages
+*/
+
+// string[] names = new string[] { "Sophia", "Andrew", "AllGreetings" };
+
+// string messageText = "";
+
+// foreach (string name in names)
+// {
+//     if (name == "Sophia")
+//         messageText = SophiaMessage();
+//     else if (name == "Andrew")
+//         messageText = AndrewMessage();
+//     else if (name == "AllGreetings")
+//     {
+//         messageText = SophiaMessage();
+//         messageText = messageText + "\n\r" + AndrewMessage();
+//     }
+
+//     Console.WriteLine(messageText + "\n\r");
+// }
+
+// bool pauseCode = true;
+// while (pauseCode == true);
+
+// static string SophiaMessage()
+// {
+//     return "Hello, my name is Sophia.";
+// }
+
+// static string AndrewMessage()
+// {
+//     return "Hi, my name is Andrew. Good to meet you.";
+// }
+string? readResult;
+int startIndex = 0;
+bool goodEntry = false;
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+
+// Display the array to the console.
+Console.Clear();
+Console.Write("\n\rThe 'numbers' array contains: { ");
+foreach (int number in numbers)
 {
-    RandomizeAnimals();
-    string[,] group = AssignGroup(groups);
-    Console.WriteLine(schoolName);
-    PrintGroup(group);
+    Console.Write($"{number} ");
 }
 
-PlanSchoolVisit("School A");
-PlanSchoolVisit("School B", 3);
-PlanSchoolVisit("School C", 2);
-
-void RandomizeAnimals() 
+// To calculate a sum of array elements, 
+//  prompt the user for the starting element number.
+Console.WriteLine($"}}\n\r\n\rTo sum values 'n' through 5, enter a value for 'n':");
+while (goodEntry == false)
 {
-    Random random = new Random();
+    readResult = Console.ReadLine();
+    goodEntry = int.TryParse(readResult, out startIndex);
 
-    for (int i = 0; i < pettingZoo.Length; i++) 
+    if (startIndex > 5)
     {
-        int r = random.Next(i, pettingZoo.Length);
-
-        string temp = pettingZoo[r];
-        pettingZoo[r] = pettingZoo[i];
-        pettingZoo[i] = temp;
+        goodEntry = false;
+        Console.WriteLine("\n\rEnter an integer value between 1 and 5");
     }
 }
 
-string[,] AssignGroup(int groups = 6) 
+// Display the sum and then pause.
+Console.WriteLine($"\n\rThe sum of numbers {startIndex} through {numbers.Length} is: {SumValues(numbers, startIndex)}");
+
+Console.WriteLine("press Enter to exit");
+readResult = Console.ReadLine();
+
+// This method returns the sum of elements n through 5
+static int SumValues(int[] numbers, int n)
 {
-    string[,] result = new string[groups, pettingZoo.Length/groups];
-    int start = 0;
-
-    for (int i = 0; i < groups; i++) 
+    int sum = 0;
+    for (int i = n; i < numbers.Length; i++)
     {
-        for (int j = 0; j < result.GetLength(1); j++) 
-        {
-            result[i,j] = pettingZoo[start++];
-        }
+        sum += numbers[i];
     }
-
-    return result;
+    return sum;
 }
-
-void PrintGroup(string[,] group) 
-{
-    for (int i = 0; i < group.GetLength(0); i++) 
-    {
-        Console.Write($"Group {i + 1}: ");
-        for (int j = 0; j < group.GetLength(1); j++) 
-        {
-            Console.Write($"{group[i,j]}  ");
-        }
-        Console.WriteLine();
-    }
-}
-
-
